@@ -1,0 +1,10 @@
+.venv
+.idea
+Pipfile
+Pipfile.lock
+dist
+hello_world.egg-info
+.mypy_cache
+.tox
+.coverage
+.git
