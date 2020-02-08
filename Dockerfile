@@ -9,7 +9,7 @@ RUN poetry install --no-root
 
 FROM build as test
 COPY . . 
-RUN tox -e py38,flake8,pylint,refactory,mypy -p all && tox -e build
+RUN tox -e py38,flake8,pylint,mypy,coverage -p all && tox -e build
 
 FROM base as prod
 COPY --from=test /wheels/dist/ .
