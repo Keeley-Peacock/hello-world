@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hello-world"
-version = "0.2.0"
+version = "0.2.1"
 description = ""
 authors = ["Keeley Peacock <llamagrill@gmail.com>", "Paul Peacock <pcp1976@gmail.com>"]
 readme = "README.md"
