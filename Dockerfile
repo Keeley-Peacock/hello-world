@@ -1,7 +1,8 @@
-FROM python:3.8-slim as base
+FROM python:3.8-alpine as base
 
 FROM base as build
-RUN python -m pip install poetry  && poetry config virtualenvs.create false
+RUN apk add --no-cache py-cryptography gcc musl-dev libffi-dev libressl-dev
+RUN python -m pip install poetry && poetry config virtualenvs.create false
 WORKDIR /wheels
 COPY pyproject.toml ./
 COPY poetry.lock ./
