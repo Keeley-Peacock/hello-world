@@ -1,7 +1,7 @@
 FROM python:3.8-alpine as base
 
 FROM base as build
-RUN apk add --no-cache py-cryptography gcc musl-dev libffi-dev libressl-dev
+RUN apk add --no-cache py-cryptography gcc musl-dev libffi-dev libressl-dev git
 RUN python -m pip install poetry && poetry config virtualenvs.create false
 WORKDIR /wheels
 COPY pyproject.toml ./
