@@ -16,4 +16,4 @@ FROM base as prod
 COPY --from=test /wheels/dist/ .
 RUN pip install --no-cache --find-links=. hello_world*.whl
 
-CMD ["gunicorn", "-w 1", "--bind", "0.0.0.0:8000", "hello_world.serve:app"]
+CMD ["waitress-serve", "--listen=*:8000", "hello_world.serve:app"]
