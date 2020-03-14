@@ -8,3 +8,7 @@ hello_world.egg-info
 .tox
 .coverage
 .git
+.nox
+.pytset_cache
+__pycache__
+.coverage
